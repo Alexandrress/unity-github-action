@@ -2,7 +2,7 @@ name: Test ⚙
 
 on:
   pull_request: {}
-  push: { branches: [master, develop] }
+  push: { branches: [develop] }
 
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
@@ -23,7 +23,7 @@ jobs:
           path: Library #Path where Unity stocks build cache
           key: Library
       # Test
-      - name: Build & run unite tests
-        uses: game-ci/unity-test-runner@v2.0-alpha-5
+      - name: Run tests
+        uses: webbertakken/unity-test-runner@v1.3
         with:
           unityVersion: 2020.1.10f1
