@@ -7,6 +7,7 @@ on:
 
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+  UNITY_VERSION: "2020.1.10f1"
 
 jobs:
   build:
@@ -27,13 +28,13 @@ jobs:
       - name: Run tests
         uses: game-ci/unity-test-runner@v2
         with:
-          unityVersion: 2020.1.10f1
+          unityVersion: ${{ env.UNITY_VERSION }}
           customParameters: '-nographics'
       # Build
       - name: Build project for Windows
         uses: game-ci/unity-builder@v2
         with:
-          unityVersion: 2020.1.10f1
+          unityVersion: ${{ env.UNITY_VERSION }}
           targetPlatform: StandaloneWindows64 
       # Output 
       - uses: actions/upload-artifact@v2
