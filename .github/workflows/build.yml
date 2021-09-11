@@ -28,6 +28,7 @@ jobs:
         uses: game-ci/unity-test-runner@v2.0-alpha-5
         with:
           unityVersion: 2020.1.10f1
+          customParameters: '-nographics'
       # Build
       - name: Build project for Windows
         uses: game-ci/unity-builder@v2
