@@ -20,10 +20,10 @@ jobs:
       # Cache
       - uses: actions/cache@v2
         with:
-          path: Library
+          path: Library #Path where Unity stocks build cache
           key: Library
       # Test
-      - name: Run unite tests
+      - name: Build & run unite tests
         uses: game-ci/unity-test-runner@v2
         with:
           unityVersion: 2020.1.10f1
