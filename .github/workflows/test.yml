@@ -24,6 +24,6 @@ jobs:
           key: Library
       # Test
       - name: Build & run unite tests
-        uses: game-ci/unity-test-runner@v2
+        uses: game-ci/unity-test-runner@v2.0-alpha-5
         with:
           unityVersion: 2020.1.10f1
