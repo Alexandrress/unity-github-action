@@ -24,7 +24,7 @@ jobs:
           key: Library
       # Test
       - name: Run tests
-        uses: game-ci/unity-test-runner@v2.0-alpha-5
+        uses: game-ci/unity-test-runner@v2
         with:
           unityVersion: 2020.1.10f1
           customParameters: '-nographics'
