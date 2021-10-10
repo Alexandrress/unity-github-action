@@ -45,10 +45,10 @@ jobs:
       - name: Zip build
         run: |
           pushd build/StandaloneWindows64
-          zip -r ../../StandaloneWindows64.zip .
+          zip -r ../../ZIP_NAME.zip .
           popd
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: StandaloneWindows64.zip
+          files: ZIP_NAME.zip
           name: Release ${{ github.ref }}
