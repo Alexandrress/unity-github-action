@@ -1,7 +1,9 @@
 name: Test ⚙
 
 on:
-  push: { branches: [develop] }
+  push:
+    branches:
+      - '**' #Matches every branch
 
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
