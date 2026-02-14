@@ -1,14 +1,29 @@
-# Unity-Github-Action
-A repository to showcase github action with Unity. The Unity project is empty.
-Don't forget to change the Unity version in each .yml if you use my files !
+# unity-github-action
 
-This repository has three workflows :
-- "activation.yml" which needs to be executed at the start of your project to get your license and set the "UNITY_LICENSE" variable in github secret. 🔑
-- "test.yml" which verifies for each push that your project run all of its unit tests right, and that the project can be built. ⚙ 
-- "build.yml" which is executed when creating a new release, testing once again your Unity project, and then building it for Windowsx64, and attaching the .zip to your release. 🔨
+This repository contains a minimal Unity project used as an example for GitHub Actions / CI workflows.
 
-Thanks to @webbertaken ( https://game.ci/ )
+Unity version
 
-Tutorials I used :
-https://isaacbroyles.com/gamedev/2020/07/04/unity-github-actions.html
-https://bearandhammer.net/2020/06/13/github-actions-unity-3d/
+- Editor: 2020.1.10f1
+
+Contents
+
+- `Assets/` — Scenes, scripts and tests.
+- `ProjectSettings/` — Unity project settings.
+
+Getting started
+
+1. Open this folder in Unity Editor 2020.1.10f1.
+2. Open `Assets/Scenes/SampleScene.unity` and press Play.
+
+Running tests
+
+Use Unity Test Runner (Window → General → Test Runner) to run the tests in `Assets/Tests`.
+
+Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE).
